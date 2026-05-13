@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHTechCloud - Soluções em Cloud Microsoft</title>
+    
+    <!-- Meta Description -->
+    <meta name="description" content="PHTechCloud - Especialista em Microsoft Azure com 13 certificações. Soluções em DevSecOps, IA, Terraform, Kubernetes. Arquiteto Cloud com 13 anos de experiência.">
+    <meta name="keywords" content="PHTechCloud, Paulo Henrique, Azure, DevSecOps, IA, Terraform, Kubernetes, Microsoft Certified, Arquiteto Cloud, Soluções Microsoft">
+    <meta name="author" content="Paulo Henrique - PHTechCloud">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="PHTechCloud - Soluções em Cloud Microsoft">
+    <meta property="og:description" content="Especialista em Microsoft Azure com 13 certificações Microsoft, com foco DevSecOps, IA, automações e redução de custos em Cloud.">
+    <meta property="og:image" content="https://phtechcloud.com.br/PHCloudTech.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PHTechCloud - Soluções em Cloud Microsoft">
+    <meta property="og:url" content="https://phtechcloud.com.br/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="PHTechCloud">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PHTechCloud - Soluções em Cloud Microsoft">
+    <meta name="twitter:description" content="Especialista em Microsoft Azure com 13 certificações Microsoft, com foco DevSecOps, IA, automações e redução de custos em Cloud.">
+    <meta name="twitter:image" content="https://phtechcloud.com.br/PHCloudTech.png">
+    <meta name="twitter:image:alt" content="PHTechCloud - Soluções em Cloud Microsoft">
+    
+    <!-- WhatsApp/Facebook Specific Meta Tags -->
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:updated_time" content="2025-01-31T12:30:00Z">
+    <meta property="article:modified_time" content="2025-01-31T12:00:00Z">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo-quadrado-pequeno.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: #051b2b;
+        }
+        .cloud-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .skill-bar {
+            transition: width 2s ease-in-out;
+        }
+        /* Efeito de fundo para a seção Hero */
+        .hero-bg-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg-effect::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #5ce1e6 0%, #051b2b 80%);
+            opacity: 0.22;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .hero-bg-effect > div {
+            position: relative;
+            z-index: 1;
+        }
+        /* Efeito de fundo para o final da página */
+        .footer-bg-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        .footer-bg-effect::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, #5ce1e6 0%, #051b2b 80%);
+            opacity: 0.22;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .footer-bg-effect > div {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="font-sans" style="background-color: #051b2b;">
+    <!-- Navigation -->
+    <nav class="shadow-lg fixed w-full z-50" style="background-color: #051b2b; border-bottom: 1px solid #5ce1e6;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="phtechcloud-logo-cumprido.png" alt="PH Tech Cloud Logo" style="height: 3.5rem; border-radius: 5px;">
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="transition duration-300" style="color: #d9d9d9;" onmouseover="this.style.color='#5ce1e6'" onmouseout="this.style.color='#d9d9d9'">Início</a>
+                    <a href="#about" class="transition duration-300" style="color: #d9d9d9;" onmouseover="this.style.color='#5ce1e6'" onmouseout="this.style.color='#d9d9d9'">Sobre</a>
+                    <a href="#services" class="transition duration-300" style="color: #d9d9d9;" onmouseover="this.style.color='#5ce1e6'" onmouseout="this.style.color='#d9d9d9'">Serviços</a>
+                    <a href="#experience" class="transition duration-300" style="color: #d9d9d9;" onmouseover="this.style.color='#5ce1e6'" onmouseout="this.style.color='#d9d9d9'">Experiências</a>
+                    <a href="#contact" class="transition duration-300" style="color: #d9d9d9;" onmouseover="this.style.color='#5ce1e6'" onmouseout="this.style.color='#d9d9d9'">Contato</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" style="color: #d9d9d9;" onmouseover="this.style.color='#5ce1e6'" onmouseout="this.style.color='#d9d9d9'">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden border-t" style="background-color: #051b2b; border-color: #5ce1e6;">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2" style="color: #d9d9d9;" onmouseover="this.style.color='#5ce1e6'" onmouseout="this.style.color='#d9d9d9'">Início</a>
+                <a href="#about" class="block px-3 py-2" style="color: #d9d9d9;" onmouseover="this.style.color='#5ce1e6'" onmouseout="this.style.color='#d9d9d9'">Sobre</a>
+                <a href="#services" class="block px-3 py-2" style="color: #d9d9d9;" onmouseover="this.style.color='#5ce1e6'" onmouseout="this.style.color='#d9d9d9'">Serviços</a>
+                <a href="#experience" class="block px-3 py-2" style="color: #d9d9d9;" onmouseover="this.style.color='#5ce1e6'" onmouseout="this.style.color='#d9d9d9'">Experiência</a>
+                <a href="#contact" class="block px-3 py-2" style="color: #d9d9d9;" onmouseover="this.style.color='#5ce1e6'" onmouseout="this.style.color='#d9d9d9'">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center pt-24 hero-bg-effect">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center text-white">
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
+                        Olá, eu sou o<br><span id="typed-name" style="color: #5ce1e6;"></span>
+                    </h1>
+                    <p class="text-lg md:text-xl mb-6 opacity-90">
+                        Arquiteto de Soluções Cloud Azure | DevSecOps | IA | Terraform | Kubernetes | Docker | Linux | ITIL v4 | MCT | 13x Microsoft Certificate
+                    </p>
+                    <p class="text-base mb-4 opacity-80">
+                        Sou um profissional com 13 anos de experiência em TI, especializado em Microsoft Azure com 13 certificações Microsoft, com foco em DevSecOps, IA, automações, redução de custos em Cloud e infraestrutura como código.
+                    </p>
+                    <p class="text-base opacity-80">
+                        Sou fundador da PHTechCloud, onde levo minha expertise técnica diretamente para dentro dos projetos dos meus clientes, garantindo excelência na implementação de soluções cloud.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="p-3 rounded-full inline-block" style="background-color: #051b2b; border: 3px solid #5ce1e6;">
+                        <img src="foto.jpg" alt="Paulo Henrique Gabriel Felix" class="w-80 h-80 rounded-full object-cover shadow-lg">
+                    </div>
+                    <h3 class="text-xl font-bold mt-4" style="color: #5ce1e6;">Arquiteto de Soluções Cloud Azure</h3>
+                    <div class="flex justify-center space-x-6 mt-4">
+                        <a href="mailto:paulohfelix@outlook.com" class="text-white hover:text-cyan-400 transition duration-300">
+                            <i class="fas fa-envelope text-2xl"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/paulohenriquefelix" target="_blank" class="text-white hover:text-cyan-400 transition duration-300">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@PauloHenrique-bn7fw" target="_blank" class="text-white hover:text-cyan-400 transition duration-300">
+                            <i class="fab fa-youtube text-2xl"></i>
+                        </a>
+                        <a href="https://learn.microsoft.com/pt-br/users/paulohenriquegabrielfelix-9362/transcript" target="_blank" class="text-white hover:text-cyan-400 transition duration-300">
+                            <i class="fas fa-certificate text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="pt-8 pb-8" style="background-color: #051b2b;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4" style="color: #d9d9d9;">Sobre Mim</h2>
+                <div class="w-24 h-1 mx-auto" style="background-color: #5ce1e6;"></div>
+            </div>
+            <div class="text-center max-w-4xl mx-auto">
+                <p class="text-lg mb-6 leading-relaxed" style="color: #d9d9d9; opacity: 0.9;">
+                    Meu objetivo é ajudar empresas a alcançarem seus objetivos de negócio através da tecnologia, oferecendo soluções inovadoras e eficientes que transformam a forma como elas operam na nuvem.
+                </p>
+                
+                <p class="text-base mb-6 leading-relaxed" style="color: #d9d9d9; opacity: 0.8;">
+                    Como Arquiteto de Soluções Cloud Azure, minha jornada de 13 anos em tecnologia começou com uma base sólida de 8 anos em infraestrutura On-premises, evoluindo nos últimos 5 anos para uma especialização profunda em Microsoft Azure. Como Microsoft Certified Trainer (MCT), meu foco é projetar e implementar ecossistemas cloud eficientes e seguros, utilizando DevSecOps, Infraestrutura como Código (Terraform), contêineres (Kubernetes, Docker) e soluções de IA para impulsionar a inovação e a redução de custos.
+                </p>
+                
+                <p class="text-base leading-relaxed" style="color: #d9d9d9; opacity: 0.8;">
+                    Com 13 certificações Microsoft, busco constantemente aprimorar minhas habilidades para oferecer as soluções mais inovadoras e eficientes do mercado. Meu objetivo é ser um parceiro estratégico, ajudando as empresas a atingirem seus objetivos de negócio através da tecnologia.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-8" style="background-color: #051b2b;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4" style="color: #d9d9d9;">Experiências</h2>
+                <div class="w-24 h-1 mx-auto" style="background-color: #5ce1e6;"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-6 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl font-bold mb-2" style="color: #5ce1e6;">13+</div>
+                    <div style="color: #d9d9d9; opacity: 0.8;">Anos de Experiências</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold mb-2" style="color: #5ce1e6;">13</div>
+                    <div style="color: #d9d9d9; opacity: 0.8;">Certificações Microsoft</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold mb-2" style="color: #5ce1e6;">5+</div>
+                    <div style="color: #d9d9d9; opacity: 0.8;">Anos em Azure</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold mb-2" style="color: #5ce1e6;">8+</div>
+                    <div style="color: #d9d9d9; opacity: 0.8;">Anos em Infraestrutura</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold mb-2" style="color: #5ce1e6;">4+</div>
+                    <div style="color: #d9d9d9; opacity: 0.8;">Anos em DevSecOps</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold mb-2" style="color: #5ce1e6;">1+</div>
+                    <div style="color: #d9d9d9; opacity: 0.8;">Anos em AI</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-8" style="background-color: #051b2b;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4" style="color: #d9d9d9;">Certificações</h2>
+                <div class="w-24 h-1 mx-auto" style="background-color: #5ce1e6;"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                <div class="text-center">
+                    <img src="certifications/MCT.png" alt="Microsoft Certified Trainer" class="mx-auto" style="max-width: 100px;">
+                    <p class="text-sm mt-2" style="color: #d9d9d9;">Microsoft Certified Trainer</p>
+                </div>
+                <div class="text-center">
+                    <img src="certifications/az-400.png" alt="Azure DevOps Engineer" class="mx-auto" style="max-width: 100px;">
+                    <p class="text-sm mt-2" style="color: #d9d9d9;">Azure DevOps Engineer</p>
+                </div>
+                <div class="text-center">
+                    <img src="certifications/az-305.png" alt="Azure Solutions Architect" class="mx-auto" style="max-width: 100px;">
+                    <p class="text-sm mt-2" style="color: #d9d9d9;">Azure Solutions Architect</p>
+                </div>
+                <div class="text-center">
+                    <img src="certifications/az-500.png" alt="Azure Security Engineer" class="mx-auto" style="max-width: 100px;">
+                    <p class="text-sm mt-2" style="color: #d9d9d9;">Azure Security Engineer</p>
+                </div>
+                <div class="text-center">
+                    <img src="certifications/az-700.png" alt="Azure Network Engineer" class="mx-auto" style="max-width: 100px;">
+                    <p class="text-sm mt-2" style="color: #d9d9d9;">Azure Network Engineer</p>
+                </div>
+                <div class="text-center">
+                    <img src="certifications/az-104.png" alt="Azure Administrator" class="mx-auto" style="max-width: 100px;">
+                    <p class="text-sm mt-2" style="color: #d9d9d9;">Azure Administrator</p>
+                </div>
+                <div class="text-center">
+                    <img src="certifications/az-900.png" alt="Azure Fundamentals" class="mx-auto" style="max-width: 100px;">
+                    <p class="text-sm mt-2" style="color: #d9d9d9;">Azure Fundamentals</p>
+                </div>
+                <div class="text-center">
+                    <img src="certifications/az-800.png" alt="Administering Windows Server Hybrid Core Infrastructure" class="mx-auto" style="max-width: 100px;">
+                    <p class="text-sm mt-2" style="color: #d9d9d9;">Administering Windows Server Hybrid Core Infrastructure</p>
+                </div>
+                <div class="text-center">
+                    <img src="certifications/az-303.png" alt="Microsoft Azure Architect Technologies" class="mx-auto" style="max-width: 100px;">
+                    <p class="text-sm mt-2" style="color: #d9d9d9;">Microsoft Azure Architect Technologies</p>
+                </div>
+                <div class="text-center">
+                    <img src="certifications/az-140.png" alt="Azure Virtual Desktop" class="mx-auto" style="max-width: 100px;">
+                    <p class="text-sm mt-2" style="color: #d9d9d9;">Azure Virtual Desktop</p>
+                </div>
+                <div class="text-center">
+                    <img src="certifications/sc-400.png" alt="Security, Compliance, and Identity Fundamentals" class="mx-auto" style="max-width: 100px;">
+                    <p class="text-sm mt-2" style="color: #d9d9d9;">Security, Compliance, and Identity Fundamentals</p>
+                </div>
+                <div class="text-center">
+                    <img src="certifications/sc-300.png" alt="Identity and Access Administrator" class="mx-auto" style="max-width: 100px;">
+                    <p class="text-sm mt-2" style="color: #d9d9d9;">Identity and Access Administrator</p>
+                </div>
+                <div class="text-center">
+                    <img src="certifications/ai-900.png" alt="Azure AI Fundamentals" class="mx-auto" style="max-width: 100px;">
+                    <p class="text-sm mt-2" style="color: #d9d9d9;">Azure AI Fundamentals</p>
+                </div>
+                <div class="text-center">
+                    <img src="certifications/itil.png" alt="ITIL v4 Foundation" class="mx-auto" style="max-width: 100px;">
+                    <p class="text-sm mt-2" style="color: #d9d9d9;">ITIL v4 Foundation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-8" style="background-color: #051b2b;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4" style="color: #d9d9d9;">Minhas Competências</h2>
+                <div class="w-24 h-1 mx-auto" style="background-color: #5ce1e6;"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
+                <div>
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="font-semibold" style="color: #d9d9d9;">Microsoft Azure</span>
+                            <div class="flex space-x-1" style="color: #5ce1e6;">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="font-semibold" style="color: #d9d9d9;">FinOps</span>
+                            <div class="flex space-x-1" style="color: #5ce1e6;">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="font-semibold" style="color: #d9d9d9;">Infraestrutura como Código</span>
+                            <div class="flex space-x-1" style="color: #5ce1e6;">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="font-semibold" style="color: #d9d9d9;">Automações</span>
+                            <div class="flex space-x-1" style="color: #5ce1e6;">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="font-semibold" style="color: #d9d9d9;">Windows Server e Linux</span>
+                            <div class="flex space-x-1" style="color: #5ce1e6;">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="font-semibold" style="color: #d9d9d9;">Redes e Segurança</span>
+                            <div class="flex space-x-1" style="color: #5ce1e6;">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="font-semibold" style="color: #d9d9d9;">DevSecOps</span>
+                            <div class="flex space-x-1" style="color: #5ce1e6;">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="font-semibold" style="color: #d9d9d9;">Kubernetes & Docker</span>
+                            <div class="flex space-x-1" style="color: #5ce1e6;">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="font-semibold" style="color: #d9d9d9;">Observabilidade/Monitoramento</span>
+                            <div class="flex space-x-1" style="color: #5ce1e6;">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="font-semibold" style="color: #d9d9d9;">Inteligência Artificial</span>
+                            <div class="flex space-x-1" style="color: #5ce1e6;">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-8" style="background-color: #051b2b;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4" style="color: #d9d9d9;">Meus Serviços</h2>
+                <div class="w-24 h-1 mx-auto mb-6" style="background-color: #5ce1e6;"></div>
+                <p class="max-w-2xl mx-auto" style="color: #d9d9d9; opacity: 0.8;">
+                    Ofereço soluções completas em cloud computing para impulsionar seu negócio
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-8 rounded-xl shadow-lg card-hover" style="background-color: rgba(217, 217, 217, 0.05); border: 1px solid rgba(92, 225, 230, 0.2);">
+                    <div class="text-4xl mb-6" style="color: #5ce1e6;">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4" style="color: #d9d9d9;">Microsoft Azure Cloud</h3>
+                    <p class="mb-6" style="color: #d9d9d9; opacity: 0.8;">
+                        Como especialista em Microsoft Azure, ofereço soluções completas que abrangem IaaS, PaaS e SaaS. Desenvolvo e implemento arquiteturas de ponta a ponta, garantindo performance, segurança e escalabilidade.
+                    </p>
+                    <ul class="text-sm space-y-2" style="color: #d9d9d9; opacity: 0.7;">
+                        <li>• Arquitetura de Soluções (IaaS, PaaS, SaaS)</li>
+                        <li>• Modernização e Migração de Aplicações</li>
+                        <li>• Otimização de Performance e Custos</li>
+                    </ul>
+                </div>
+                <div class="p-8 rounded-xl shadow-lg card-hover" style="background-color: rgba(217, 217, 217, 0.05); border: 1px solid rgba(92, 225, 230, 0.2);">
+                    <div class="text-4xl mb-6" style="color: #5ce1e6;">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4" style="color: #d9d9d9;">DevOps & Automação</h3>
+                    <p class="mb-6" style="color: #d9d9d9; opacity: 0.8;">
+                        Implementação de pipelines CI/CD com Azure DevOps, automação de deployments e 
+                        otimização de processos de desenvolvimento.
+                    </p>
+                    <ul class="text-sm space-y-2" style="color: #d9d9d9; opacity: 0.7;">
+                        <li>• CI/CD Pipelines</li>
+                        <li>• Infrastructure as Code</li>
+                        <li>• Monitoramento automatizado</li>
+                    </ul>
+                </div>
+                <div class="p-8 rounded-xl shadow-lg card-hover" style="background-color: rgba(217, 217, 217, 0.05); border: 1px solid rgba(92, 225, 230, 0.2);">
+                    <div class="text-4xl mb-6" style="color: #5ce1e6;">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4" style="color: #d9d9d9;">Segurança Cloud</h3>
+                    <p class="mb-6" style="color: #d9d9d9; opacity: 0.8;">
+                        Implementação de melhores práticas de segurança, compliance 
+                        e governança em ambientes cloud.
+                    </p>
+                    <ul class="text-sm space-y-2" style="color: #d9d9d9; opacity: 0.7;">
+                        <li>• Auditoria de segurança</li>
+                        <li>• Implementação de políticas</li>
+                        <li>• Controle de acesso e identidade</li>
+                    </ul>
+                </div>
+                <div class="p-8 rounded-xl shadow-lg card-hover" style="background-color: rgba(217, 217, 217, 0.05); border: 1px solid rgba(92, 225, 230, 0.2);">
+                    <div class="text-4xl mb-6" style="color: #5ce1e6;">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4" style="color: #d9d9d9;">Otimização de Custos em Cloud</h3>
+                    <p class="mb-6" style="color: #d9d9d9; opacity: 0.8;">
+                        Análise e otimização de custos cloud, implementando estratégias 
+                        para reduzir gastos sem comprometer performance.
+                    </p>
+                    <ul class="text-sm space-y-2" style="color: #d9d9d9; opacity: 0.7;">
+                        <li>• Análise de billing</li>
+                        <li>• Right-sizing de recursos</li>
+                        <li>• Estratégias de economia</li>
+                    </ul>
+                </div>
+                <div class="p-8 rounded-xl shadow-lg card-hover" style="background-color: rgba(217, 217, 217, 0.05); border: 1px solid rgba(92, 225, 230, 0.2);">
+                    <div class="text-4xl mb-6" style="color: #5ce1e6;">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4" style="color: #d9d9d9;">Arquitetura de Sistemas</h3>
+                    <p class="mb-6" style="color: #d9d9d9; opacity: 0.8;">
+                        Design e implementação de arquiteturas escaláveis, resilientes 
+                        e de alta disponibilidade na cloud.
+                    </p>
+                    <ul class="text-sm space-y-2" style="color: #d9d9d9; opacity: 0.7;">
+                        <li>• Arquiteturas serverless</li>
+                        <li>• Microserviços</li>
+                        <li>• Alta disponibilidade</li>
+                    </ul>
+                </div>
+                <div class="p-8 rounded-xl shadow-lg card-hover" style="background-color: rgba(217, 217, 217, 0.05); border: 1px solid rgba(92, 225, 230, 0.2);">
+                    <div class="text-4xl mb-6" style="color: #5ce1e6;">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4" style="color: #d9d9d9;">Consultoria & Treinamento</h3>
+                    <p class="mb-6" style="color: #d9d9d9; opacity: 0.8;">
+                        Consultoria estratégica e treinamentos personalizados para 
+                        capacitar equipes em tecnologias cloud.
+                    </p>
+                    <ul class="text-sm space-y-2" style="color: #d9d9d9; opacity: 0.7;">
+                        <li>• Workshops técnicos</li>
+                        <li>• Mentoria de equipes</li>
+                        <li>• Estratégia cloud</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8" style="background-color: #051b2b;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col items-center">
+                <div class="text-center mb-4">
+                    <a href="#home" class="flex items-center justify-center">
+                        <img src="phtechcloud-logo-cumprido.png" alt="PH Tech Cloud Logo" style="height: 3rem; border-radius: 5px;">
+                    </a>
+                </div>
+                <div class="text-center">
+                    <p class="text-sm" style="color: #d9d9d9;">
+                        © 2025 PHTechCloud. Todos os direitos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Typed.js configuration
+        new Typed('#typed-name', {
+            strings: ['Paulo Henrique', 'um Arquiteto de Soluções Cloud Azure'],
+            typeSpeed: 70,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
+</body>
+</html>

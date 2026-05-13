@@ -1,0 +1,42 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+  batch: true
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - site/*
+    exclude:
+      - site/azure-pipelines.yml
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - task: CopyFiles@2
+    displayName: "Copy files"
+    inputs:
+      SourceFolder: site/
+      Contents: '**'
+      TargetFolder: "$(Build.ArtifactStagingDirectory)/site"
+
+  - task: ArchiveFiles@2
+    displayName: "Archive site as zip"
+    inputs:
+      rootFolderOrFile: "$(Build.ArtifactStagingDirectory)/site"
+      includeRootFolder: false
+      archiveType: "zip"
+      archiveFile: "$(Build.ArtifactStagingDirectory)/site.zip"
+      replaceExistingArchive: true
+
+  - task: PublishBuildArtifacts@1
+    displayName: "Publish Artifact"
+    inputs:
+      PathtoPublish: "$(Build.ArtifactStagingDirectory)/site.zip"
+      ArtifactName: "site"
+      publishLocation: "Container"
